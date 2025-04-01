@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT NOW() AS current_time');
+    const [rows] = await db.query('SELECT NOW() AS `current_time`');
     res.send(`DB 연결 성공! 현재 시간: ${rows[0].current_time}`);
   } catch (err) {
     console.error(err);
