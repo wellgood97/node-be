@@ -1,0 +1,10 @@
+name: node-server
+app: node
+
+options:
+  env:
+    - name: PORT
+      value: 3000
+  ports: 3000
+  install: npm install
+  start: node index.js
